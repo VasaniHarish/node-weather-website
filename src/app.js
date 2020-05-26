@@ -13,7 +13,7 @@ const viewsPath = path.join(__dirname, '../templates/views');
 const partialPath = path.join(__dirname, '../templates/partials')
 
 //Setup handlers engine and view location
-app.disable('etag');
+
 app.set('views', viewsPath);
 app.set('view engine', 'hbs');
 app.set('partials', partialPath);
