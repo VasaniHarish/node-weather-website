@@ -52,12 +52,12 @@ app.get('/Help', (req, res) => {
 
 
 app.get('/weather', (req, res) => {
-  if (!req.query.search) {
+  if (!req.query.address) {
     return res.send({
-      error: 'Address is missing'
+      error: 'address is missing'
     })
   }
-  geoCode(req.query.search, (error, { name, lattitude, longitude } = {}) => {
+  geoCode(req.query.address, (error, { name, lattitude, longitude } = {}) => {
     if (error) {
       return res.send({error});
     }
